@@ -31,7 +31,7 @@ void findX(IplImage* imgSrc,int* min, int* max){
 	int i;
 	int minFound=0;
 	CvMat data;
-	CvScalar maxVal=cvRealScalar(imgSrc->width * 255);
+	CvScalar maxVal=cvRealScalar(imgSrc->height * 255);//max sum of each col is: imgSrc->height * 255
 	CvScalar val=cvRealScalar(0);
 	//For each col sum, if sum < width*255 then we find the min 
 	//then continue to end to search the max, if sum< width*255 then is new max
